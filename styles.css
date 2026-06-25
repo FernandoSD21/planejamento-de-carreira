@@ -84,7 +84,13 @@ button {
   right: 0;
   z-index: 18;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns:
+    minmax(max-content, 0.7fr)
+    minmax(max-content, 1fr)
+    minmax(max-content, 1.28fr)
+    minmax(max-content, 1fr)
+    minmax(max-content, 0.7fr);
+  gap: clamp(12px, 2vw, 34px);
   align-items: center;
   min-height: 80px;
   padding: 0 clamp(28px, 4.8vw, 76px);
@@ -108,7 +114,7 @@ button {
 .site-contact,
 .site-tab {
   color: var(--paper-ink);
-  font-size: clamp(14px, 1.18vw, 18px);
+  font-size: clamp(12px, 1.05vw, 18px);
   font-weight: 700;
   line-height: 1;
   text-align: center;
@@ -165,8 +171,8 @@ button {
   position: relative;
   width: min(88vw, 1440px);
   height: min(72vh, 880px);
-  min-width: 1080px;
-  min-height: 640px;
+  min-width: min(1080px, calc(100vw - 48px));
+  min-height: min(640px, calc(100svh - 132px));
   margin: clamp(16px, 3.2vh, 42px) auto 0;
 }
 
@@ -644,6 +650,7 @@ button {
   margin: 0;
   padding: 0;
   border: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   background:
     radial-gradient(circle, rgba(255, 0, 0, 0.12) 0 1px, transparent 1.3px) 0 0 / 34px 34px,
@@ -663,7 +670,9 @@ button {
   grid-template-rows: auto 1fr auto;
   gap: clamp(22px, 4vw, 62px);
   width: 100%;
+  max-width: 100%;
   min-height: 100%;
+  min-width: 0;
   padding: clamp(34px, 6vw, 82px);
 }
 
@@ -674,6 +683,14 @@ button {
   row-gap: clamp(38px, 6vw, 86px);
   align-items: start;
   padding: clamp(34px, 5vw, 68px) clamp(34px, 5.8vw, 88px) clamp(42px, 6vw, 82px);
+}
+
+.modal-content,
+.modal-preview,
+.goal-modal.has-detail-template .modal-content,
+.goal-modal.has-detail-template .modal-preview {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .modal-close {
@@ -4463,7 +4480,7 @@ body.is-meta07-lightbox-open {
   display: grid;
   grid-template-rows: 58px auto minmax(0, 1fr) 58px;
   width: 100%;
-  min-width: 1180px;
+  min-width: 0;
   height: 100%;
   min-height: 720px;
   overflow: hidden;
@@ -4968,7 +4985,7 @@ body.is-meta09-lightbox-open {
   display: grid;
   grid-template-rows: 58px minmax(0, 1fr) 42px 58px;
   width: 100%;
-  min-width: 1180px;
+  min-width: 0;
   height: 100%;
   min-height: 0;
   max-height: 100%;
@@ -5316,7 +5333,7 @@ body.is-meta09-lightbox-open {
   display: grid;
   grid-template-rows: 58px minmax(0, 1fr) 42px 58px;
   width: 100%;
-  min-width: 1180px;
+  min-width: 0;
   height: 100%;
   min-height: 0;
   max-height: 100%;
@@ -8277,7 +8294,16 @@ body.is-meta06-archive-lightbox-open {
   }
 
   .site-header {
+    grid-template-columns:
+      minmax(max-content, 0.6fr)
+      minmax(max-content, 1fr)
+      minmax(max-content, 1.18fr)
+      minmax(max-content, 1fr)
+      minmax(max-content, 0.6fr);
+    gap: clamp(8px, 1.5vw, 18px);
     min-height: 76px;
+    padding-right: 22px;
+    padding-left: 22px;
   }
 
   .site-brand,
@@ -8294,7 +8320,8 @@ body.is-meta06-archive-lightbox-open {
 
   .map-board {
     min-width: 0;
-    min-height: 850px;
+    width: min(100% - 44px, 900px);
+    min-height: min(850px, calc(100svh - 118px));
   }
 
   .year-panel {
@@ -8850,8 +8877,42 @@ body.is-meta06-archive-lightbox-open {
   }
 
   .site-header {
-    min-height: 72px;
-    padding: 0 22px;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-rows: repeat(2, auto);
+    gap: 8px 14px;
+    align-content: center;
+    min-height: 92px;
+    padding: 12px 18px;
+  }
+
+  .site-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .site-contact {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .site-nav-label,
+  .site-tab {
+    justify-self: center;
+  }
+
+  .site-nav-label {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .site-tab[data-plan-tab="intro"] {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .site-tab[data-plan-tab="year-04"] {
+    grid-column: 3;
+    grid-row: 2;
   }
 
   .site-brand,
@@ -8862,11 +8923,16 @@ body.is-meta06-archive-lightbox-open {
   }
 
   .career-map {
-    top: 72px;
+    top: 92px;
+  }
+
+  .map-board {
+    height: calc(100svh - 116px);
+    min-height: 0;
   }
 
   .year-panel {
-    top: 72px;
+    top: 92px;
     padding: 42px 22px 96px;
   }
 

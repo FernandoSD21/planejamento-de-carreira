@@ -1735,6 +1735,10 @@ function render() {
       button.textContent = node.year;
       button.setAttribute("aria-label", `${node.label}${isYearComplete(node.year) ? " concluído" : " pendente"}`);
       button.classList.toggle("is-complete", isYearComplete(node.year));
+      if (node.year === "04") {
+        button.setAttribute("aria-label", `${node.label} - abrir pós-planejamento`);
+        button.addEventListener("click", () => setPlanTab("year-04"));
+      }
     } else {
       button.setAttribute("aria-label", `${node.title}: ${node.shortDescription}`);
       button.classList.toggle("is-complete", Boolean(completedGoals[node.id]));
