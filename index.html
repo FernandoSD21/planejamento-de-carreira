@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mapa editorial interativo para planejamento de carreira em quatro anos.">
+  <title>Mapa de carreira / 04 anos</title>
+  <link rel="stylesheet" href="styles.css?v=introduction-pdf-01">
+</head>
+<body>
+  <main class="career-shell" aria-label="Planejamento de carreira em mapa interativo">
+    <header class="site-header" aria-label="Navegação principal">
+      <a class="site-brand" href="#careerMap" aria-label="Delta f">Δf</a>
+      <span class="site-nav-label">Introdução</span>
+      <button class="site-tab is-active" type="button" data-plan-tab="intro">Planejamento de Carreira</button>
+      <button class="site-tab" type="button" data-plan-tab="year-04">Pós-Planejamento</button>
+      <a class="site-contact" href="#" aria-label="Entrar em contato">Entrar em Contato</a>
+    </header>
+
+    <section class="career-map" aria-label="Mapa interativo de planejamento de carreira" data-plan-panel="intro">
+      <div class="map-board" id="careerMap">
+        <svg class="route-svg" viewBox="0 0 1440 980" preserveAspectRatio="none" aria-hidden="true">
+          <path class="route-line" id="routeLine"></path>
+        </svg>
+
+        <div class="node-layer" id="nodeLayer"></div>
+      </div>
+    </section>
+
+    <section class="year-panel post-planning-panel" aria-label="Pós-planejamento" data-plan-panel="year-04" hidden>
+      <div class="post-planning-layout">
+        <aside class="post-planning-sidebar" aria-label="Identificação do pós-planejamento">
+          <div class="post-planning-sidebar-section">
+            <p class="post-planning-sidebar-label">Identificação</p>
+            <p>Pós-Planejamento</p>
+            <p>Após o Ano 04</p>
+            <p>Direção criativa /<br>expansão profissional</p>
+            <p>Status: cenários possíveis</p>
+          </div>
+          <div class="post-planning-sidebar-section">
+            <p class="post-planning-sidebar-label">Três caminhos possíveis</p>
+            <ol class="post-planning-index" aria-label="Três caminhos possíveis">
+              <li>Direção criativa</li>
+              <li>Nystagmus independente</li>
+              <li>Atuação fractional</li>
+            </ol>
+          </div>
+        </aside>
+
+        <div class="post-planning-content">
+          <header class="post-planning-hero">
+            <p class="post-planning-kicker">Pós-Planejamento</p>
+            <h1 class="post-planning-title">Direção criativa e expansão profissional</h1>
+            <p class="post-planning-intro">DEPOIS DE CONSOLIDAR REPERTÓRIO, AUTONOMIA, EXPERIÊNCIA DE MERCADO E CAPACIDADE DE LIDERANÇA, A CARREIRA PODE SE EXPANDIR POR DIFERENTES DIREÇÕES.</p>
+          </header>
+
+          <section class="post-planning-transition" aria-label="Três caminhos possíveis após o cumprimento das metas">
+            <h2><span>TRÊS CAMINHOS POSSÍVEIS</span><br>APÓS O CUMPRIMENTO DAS METAS</h2>
+            <p>A TRILHA ATÉ O ANO 04 CONSTRÓI BASE, REPERTÓRIO, POSICIONAMENTO, EXPERIÊNCIA E CAPACIDADE DE CONDUZIR PROJETOS. A PARTIR DESSE PONTO, A PRÓXIMA DECISÃO NÃO É APENAS PROFISSIONAL: É SOBRE ESCALA, AUTORIA E FORMA DE ATUAÇÃO.</p>
+          </section>
+
+          <section class="post-planning-scenario" aria-labelledby="post-scenario-01">
+            <div class="post-planning-number">01</div>
+            <div class="post-planning-scenario-body">
+              <p class="post-planning-kicker">PRIMEIRO CENÁRIO</p>
+              <h2 id="post-scenario-01">ASSUMIR DIREÇÃO CRIATIVA EM PROJETOS DE GRANDE PORTE</h2>
+              <p>Conduzir projetos complexos do conceito à entrega final, conectando estratégia, narrativa, equipe, produção e apresentação. Este caminho representa a passagem da direção de arte para uma atuação capaz de orientar decisões que impactam todas as frentes de uma campanha ou marca.</p>
+              <div class="post-planning-scale">
+                <span>ESCALA</span>
+                <strong>CAMPANHAS / MARCAS / EQUIPES / EXPERIÊNCIAS INTEGRADAS</strong>
+              </div>
+              <p class="post-planning-statement">A DIREÇÃO CRIATIVA PASSA A ORGANIZAR NÃO APENAS A ESTÉTICA, MAS A DECISÃO POR TRÁS DE TODO O PROJETO.</p>
+            </div>
+          </section>
+
+          <section class="post-planning-scenario" aria-labelledby="post-scenario-02">
+            <div class="post-planning-number">02</div>
+            <div class="post-planning-scenario-body">
+              <p class="post-planning-kicker">SEGUNDO CENÁRIO</p>
+              <h2 id="post-scenario-02">ESTRUTURAR A NYSTAGMUS COMO NEGÓCIO INDEPENDENTE</h2>
+              <p>Transformar a Nystagmus em uma operação autoral mais estruturada, com calendário, coleção, comunicação, rede de parceiros, estratégia comercial e posicionamento próprio. O objetivo é fazer a marca crescer com consistência sem perder sua força estética, cultural e experimental.</p>
+              <div class="post-planning-scale">
+                <span>ESCALA</span>
+                <strong>COLEÇÕES / EXPERIÊNCIAS / COMUNIDADE / DISTRIBUIÇÃO / COLABORAÇÕES</strong>
+              </div>
+              <p class="post-planning-statement">A MARCA DEIXA DE SER APENAS UM PROJETO AUTORAL E PASSA A OPERAR COMO UMA PLATAFORMA CULTURAL INDEPENDENTE.</p>
+            </div>
+          </section>
+
+          <section class="post-planning-scenario" aria-labelledby="post-scenario-03">
+            <div class="post-planning-number">03</div>
+            <div class="post-planning-scenario-body">
+              <p class="post-planning-kicker">TERCEIRO CENÁRIO</p>
+              <h2 id="post-scenario-03">ATUAÇÃO COMO DIRETOR CRIATIVO FRACTIONAL</h2>
+              <p class="post-planning-subtitle">E POSSÍVEL EXPANSÃO PARA SÃO PAULO</p>
+              <p>Construir uma atuação flexível como diretor criativo para marcas, artistas, estúdios e empresas, conduzindo projetos estratégicos sem depender de uma única estrutura fixa. Esse caminho também considera uma possível expansão para São Paulo, ampliando acesso a clientes, redes criativas, projetos culturais e oportunidades de maior escala.</p>
+              <div class="post-planning-scale">
+                <span>ESCALA</span>
+                <strong>MARCAS / ARTISTAS / ESTÚDIOS / CONSULTORIA / PROJETOS ESTRATÉGICOS</strong>
+              </div>
+              <p class="post-planning-statement">A DIREÇÃO CRIATIVA FUNCIONA COMO UMA PRÁTICA FLEXÍVEL, CAPAZ DE ENTRAR EM DIFERENTES CONTEXTOS SEM PERDER ASSINATURA E CRITÉRIO.</p>
+            </div>
+          </section>
+
+          <section class="post-planning-final" aria-label="Síntese final">
+            <h2>A TRILHA TERMINA.<br>A DIREÇÃO CONTINUA.</h2>
+            <p>O planejamento constrói as condições para que a próxima etapa não seja definida apenas por oportunidade. Ela passa a ser uma escolha consciente entre liderar projetos de grande escala, expandir uma marca independente ou atuar de forma estratégica em diferentes contextos criativos.</p>
+            <strong>DIREÇÃO CRIATIVA COMO POSIÇÃO, PRÁTICA E POSSIBILIDADE DE EXPANSÃO.</strong>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <aside class="legend" aria-label="Legenda do mapa">
+      <span><i class="legend-square"></i> pendente</span>
+      <span><i class="legend-square is-complete"></i> concluido</span>
+    </aside>
+
+    <div class="goal-tooltip" id="goalTooltip" role="status" aria-live="polite"></div>
+  </main>
+
+  <dialog class="goal-modal" id="goalModal" aria-labelledby="modalTitle">
+    <div class="modal-grid">
+      <button class="modal-close" type="button" aria-label="Fechar">x</button>
+      <div class="modal-kicker" id="modalMeta">META</div>
+      <section class="modal-content">
+        <h2 id="modalTitle">Meta</h2>
+      <div class="modal-description" id="modalDescription">Descrição completa da meta será inserida aqui.</div>
+      </section>
+      <section class="modal-preview" aria-label="Preview de conclusão">
+        <p class="preview-label">PREVIEW</p>
+        <div id="modalPreview">Preview da conclusão da meta será inserido aqui.</div>
+      </section>
+      <button class="complete-button" type="button" id="completeButton">Marcar como concluído</button>
+    </div>
+  </dialog>
+
+  <script src="script.js?v=introduction-pdf-01"></script>
+</body>
+</html>
