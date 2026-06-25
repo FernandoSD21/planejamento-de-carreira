@@ -1543,6 +1543,7 @@ const nodeLayer = document.querySelector("#nodeLayer");
 const planTabs = [...document.querySelectorAll("[data-plan-tab]")];
 const planPanels = [...document.querySelectorAll("[data-plan-panel]")];
 const yearGoalLinks = [...document.querySelectorAll("[data-open-goal]")];
+const introductionButtons = [...document.querySelectorAll("[data-open-introduction]")];
 const routeLine = document.querySelector("#routeLine");
 const tooltip = document.querySelector("#goalTooltip");
 const modal = document.querySelector("#goalModal");
@@ -4647,6 +4648,13 @@ yearGoalLinks.forEach((link) => {
   link.addEventListener("click", () => {
     const goalItem = findGoalById(link.dataset.openGoal);
     if (goalItem) openGoal(goalItem);
+  });
+});
+
+introductionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setPlanTab("intro");
+    renderIntroductionModal();
   });
 });
 
