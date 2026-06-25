@@ -108,7 +108,7 @@ const meta01Content = {
   title: "Desenvolver o primeiro drop da Nystagmus",
   summary: "Construir o primeiro lançamento da marca e colocá-lo no ar, definindo uma base estética, conceitual e estratégica para a identidade da Nystagmus.",
   description: [
-    "A Meta 01 marca o início concreto da Nystagmus no mercado.",
+    "A Meta 02 marca o início concreto da Nystagmus no mercado.",
     "O foco desta etapa é desenvolver o primeiro drop da marca de maneira mais contida, precisa e intencional, criando um lançamento inicial capaz de apresentar seu universo visual e emocional sem tentar dizer tudo de uma vez.",
     "Esse primeiro lançamento deve funcionar como uma introdução ao sentimento Nystagmus — uma primeira cápsula de identidade, tensão e linguagem.",
     "A proposta é construir uma seleção enxuta de peças, composta por um casaco, uma blusa e uma bota, com atenção especial à coerência estética entre produto, styling, direção visual e narrativa da marca.",
@@ -1507,6 +1507,26 @@ const careerPlan = [
 ];
 
 careerPlan[0].goals[0] = goal("year-01-goal-01", "Meta 01", meta01Content.shortDescription, meta01Content, meta01Content.name);
+const year01Meta01Goal = careerPlan[0].goals[0];
+const year01Meta02Goal = careerPlan[0].goals[1];
+careerPlan[0].goals[0] = {
+  ...year01Meta02Goal,
+  id: "year-01-goal-01",
+  title: "Meta 01",
+  details: {
+    ...year01Meta02Goal.details,
+    meta: ["META 01", "ANO 01", year01Meta02Goal.details.meta[2], "STATUS: PENDENTE"]
+  }
+};
+careerPlan[0].goals[1] = {
+  ...year01Meta01Goal,
+  id: "year-01-goal-02",
+  title: "Meta 02",
+  details: {
+    ...year01Meta01Goal.details,
+    meta: ["Meta 02", "Ano 01", "Nystagmus"]
+  }
+};
 
 const pathSettings = {
   desktop: {
