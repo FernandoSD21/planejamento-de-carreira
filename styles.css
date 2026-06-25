@@ -8035,6 +8035,8 @@ body.is-meta06-archive-lightbox-open {
 }
 
 .ny-product-image.is-isolated-product {
+  max-width: 88%;
+  max-height: 88%;
   object-fit: contain;
   mix-blend-mode: normal;
 }
@@ -8044,11 +8046,11 @@ body.is-meta06-archive-lightbox-open {
 }
 
 .ny-product-image.is-boots-product {
-  object-position: center bottom;
+  object-position: center center;
 }
 
 .ny-product-gallery .ny-product-image.is-boots-product {
-  object-position: center bottom;
+  object-position: center center;
 }
 
 .ny-gallery-control {
