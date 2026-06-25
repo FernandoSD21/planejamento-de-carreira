@@ -4590,11 +4590,11 @@ function setupProductPreviewGallery() {
     currentIndex = (index + images.length) % images.length;
     mainImage.src = images[currentIndex];
     mainImage.alt = currentProduct.name;
-    mainImage.style.objectPosition = currentProduct.id === "boots" ? "center bottom" : "";
+    mainImage.style.objectPosition = currentProduct.id === "boots" ? "center center" : "";
     mainImage.classList.toggle("is-boots-product", currentProduct.id === "boots");
-    mainImage.classList.toggle("is-isolated-product", currentIndex < 2);
-    mainImage.classList.toggle("is-scenic-product", currentIndex >= 2);
-    gallery.classList.toggle("is-isolated-frame", currentIndex < 2);
+    mainImage.classList.add("is-isolated-product");
+    mainImage.classList.remove("is-scenic-product");
+    gallery.classList.add("is-isolated-frame");
     galleryCount.textContent = `${String(currentIndex + 1).padStart(2, "0")} / ${String(images.length).padStart(2, "0")}`;
   };
 
